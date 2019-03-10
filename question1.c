@@ -51,7 +51,7 @@ void collatzSeq(int num)
      }
 }
 
-int main(void)
+int main()
 {
      // declare user input
      int num;
@@ -61,7 +61,7 @@ int main(void)
      do
      {
           // get input number from user to pass to collatz
-          printf("\n Enter a number greater than zero");
+          printf("\n Enter a number greater than zero: ");
           // accept next user input as num
           scanf("%d", &num);
 
@@ -71,7 +71,7 @@ int main(void)
      pid = fork();
 
      // check if process id fork is less than zero to catch failure
-     if (pid <= 0)
+     if (pid < 0)
      {
           printf("\n Fork process failed to execute.");
           // exit program
@@ -96,7 +96,7 @@ int main(void)
           printf("Parent process is busy waiting on child process to complete...\n");
 
           // invoke the wait function for the process id to wait for child to finish
-          wait();
+          wait(NULL);
 
           printf("Parent process is done.\n");
      }
