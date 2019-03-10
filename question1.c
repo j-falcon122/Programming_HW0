@@ -82,7 +82,7 @@ int main()
      if (pid == 0)
      {
           // now created a child process
-          printf("...child process started...\n");
+          printf("...child process number %d started...\n", getpid() );
 
           // begin collatz sequence calculation
           collatzSeq(num);
