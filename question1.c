@@ -56,7 +56,7 @@ int main()
      // declare user input
      int num;
      // declare process id
-     int pid;
+     pid_t pid;
 
      do
      {
