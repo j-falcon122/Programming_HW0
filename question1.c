@@ -1,4 +1,8 @@
 #include <stdio.h>
+#include <unistd.h> 
+#include <stdlib.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 /* The Collatz conjecture concerns what happens when we take any
 	positive integer n and apply the following algorithm:
@@ -26,16 +30,16 @@
 void collatzSeq(int num)
 {
      // greater than 1 because they eventually have to reach 1
-     while (num > 1) 
+     while (num > 1)
      {
           // print the number with tabbed spacing
           printf("\t %d", num);
 
           // n / 2 , if n is even
-          if (num % 2 == 0) 
+          if (num % 2 == 0)
           {
                num = num / 2;
-          } 
+          }
           else
           {
                // 3 * n + 1 , if n is odd
@@ -43,7 +47,7 @@ void collatzSeq(int num)
           }
 
           // print the number again until it reaches 1
-          printf("\t %d", num);        
+          printf("\t %d", num);
      }
 }
 
@@ -63,11 +67,11 @@ int main(void)
 
      } while (num <= 0); // conditional that checks for greater than zero
 
-     // process id is initialized to fork() 
+     // process id is initialized to fork()
      pid = fork();
 
      // check if process id fork is less than zero to catch failure
-     if (pid <= 0) 
+     if (pid <= 0)
      {
           printf("\n Fork process failed to execute.");
           // exit program
