@@ -29,12 +29,12 @@
 // set up function for calculation
 void collatzSeq(int num)
 {
+     // print the number user input with tabbed spacing
+          printf("\t %d", num);
+
      // greater than 1 because they eventually have to reach 1
      while (num > 1)
      {
-          // print the number with tabbed spacing
-          printf("\t %d", num);
-
           // n / 2 , if n is even
           if (num % 2 == 0)
           {
@@ -88,7 +88,7 @@ int main()
           collatzSeq(num);
 
           // completed sequence
-          printf("child process is done.\n");
+          printf("\nChild process is done.\n");
      }
      else
      {
