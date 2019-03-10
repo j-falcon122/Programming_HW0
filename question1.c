@@ -84,7 +84,7 @@ int main()
           // now created a child process
           printf("...child process started...\n");
 
-          // begin collatz sequence calulcation
+          // begin collatz sequence calculation
           collatzSeq(num);
 
           // completed sequence
