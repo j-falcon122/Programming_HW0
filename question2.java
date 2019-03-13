@@ -1,5 +1,3 @@
-package os_hw0;
-
 import java.util.Scanner;
 public class question2 {
 	
